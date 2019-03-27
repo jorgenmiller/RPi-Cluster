@@ -68,7 +68,7 @@ NFS, or Network File System, allows the work nodes to access the file system of 
 Make the directory to share  
 `mkdir cluster`  
 
-`sudo nano /etc/exports/`  
+`sudo nano /etc/exports`  
 Add the line `/home/mpiuser/cluster *(rw,sync,no_root_squash,no_subtree_check)`  
 
 To share the folder every time there is a change:  
