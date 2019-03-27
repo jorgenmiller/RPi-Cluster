@@ -1,6 +1,9 @@
 # RPi-Cluster  
 How I created a raspberry pi cluster.  
 
+## Set up the Pi's
+[My rapsbery pi set up](https://github.com/jorgenmiller/Raspberry-Pi-Setup)  
+
 ## Install the latest MPICH2  
 install from [here](http://www.mcs.anl.gov/research/projects/mpich2/)  
 
