@@ -87,7 +87,7 @@ Use `df -h` to check the shared directory
 
 To mount access when booting  
 `sudo nano /etc/fstab`  
-Add the line `master:/home/mpiuser/cluster /home/mpiuser/cluster nfs`  
+Add the line `master:/home/mpiuser/cluster    /home/mpiuser/cluster   nfs     x-systemd.automount`  
 
-
-## Using the cluster
+## Using the cluster  
+[mpi4py docs](https://mpi4py.readthedocs.io/en/stable/index.html)
