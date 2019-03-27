@@ -46,7 +46,7 @@ New users with the same name on all nodes makes setup easier
 `sudo adduser mpiuser`  
 
 Give `mpiuser` sudo access  
-`usermod -aG sudo mpiuser`  
+`sudo usermod -aG sudo mpiuser`  
 
 Login to mpiuser  
 `su - mpiuser`  
