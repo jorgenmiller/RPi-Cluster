@@ -81,7 +81,7 @@ Create the folder on the work node
 `mkdir cluster`  
 
 Mount the shared folder  
-`sudo mount -t nfs master:/home/mpiuser/cloud ~/cloud`  
+`sudo mount -t nfs master:/home/mpiuser/cluster ~/cluster`  
 
 Use `df -h` to check the shared directory  
 
