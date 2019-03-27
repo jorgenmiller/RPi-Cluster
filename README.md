@@ -90,4 +90,16 @@ To mount access when booting
 Add the line `master:/home/mpiuser/cluster    /home/mpiuser/cluster   nfs     x-systemd.automount`  
 
 ## Using the cluster  
-[mpi4py docs](https://mpi4py.readthedocs.io/en/stable/index.html)
+[mpi4py docs](https://mpi4py.readthedocs.io/en/stable/index.html)  
+
+To run your programs, use  
+`mpiexec -n 10 -machinefile nodes python -m mpi4py script.py`  
+where 10 is the amount of repitiations, `nodes` is a file with a list of the work nodes, and script.py is the job.
+
+For comparison,  
+`mpiexec -n 10 python -m mpi4py script.py`  
+Runs the program only on the master node.  
+
+## Managing the cluster  
+In shell, `time <command>` can be used to run a command and return the time taken to complete the job.  
+To power off, you can give each user sudo priveleges and shutdown each easily over ssh.  
