@@ -7,7 +7,7 @@ How I created a raspberry pi cluster.
 ## Install the latest MPICH2  
 install from [here](http://www.mcs.anl.gov/research/projects/mpich2/)  
 
-Uncompress  
+Navigate to the download and uncompress it  
 `tar -xzf [mpich install folder]`  
 
 Enter mpi folder  
