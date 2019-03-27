@@ -1,22 +1,22 @@
 # RPi-Cluster  
 How I created a raspberry pi cluster.  
 
-## Set up the Pi's
+## Set up the Pi's  
 [My rapsbery pi set up](https://github.com/jorgenmiller/Raspberry-Pi-Setup)  
 
 ## Install the latest MPICH2  
 install from [here](http://www.mcs.anl.gov/research/projects/mpich2/)  
 
 Navigate to the download and uncompress it  
-`tar -xzf [mpich install folder]`  
+`tar -xzf <mpich-install-folder>`  
 
 Enter mpi folder  
-`cd [mpich folder]`  
+`cd <mpich-folder>`  
 
-Install. Disabling fortran shortens install time, but it still takes a while!  
+Install. Disabling fortran shortens install time, but it still takes a while!    
 `./configure --disable-fortran`  
 
-Build and install mpi  
+Build and install mpi (This takes a looong time)  
 `make; sudo make install`  
 
 For info on your finished install:  
@@ -45,6 +45,9 @@ Alias all nodes to numbered work nodes. One node should also be aliased to maste
 New users with the same name on all nodes makes setup easier  
 `sudo adduser mpiuser`  
 
+Give `mpiuser` sudo access  
+`usermod -aG sudo mpiuser`  
+
 Login to mpiuser  
 `su - mpiuser`  
 
@@ -68,8 +71,8 @@ Make the directory to share
 `sudo nano /etc/exports/`  
 Add the line `/home/mpiuser/cluster *(rw,sync,no_root_squash,no_subtree_check)`  
 
-To share the folder every time there is a change:
-`sudo exportfs -a`
+To share the folder every time there is a change:  
+`sudo exportfs -a`  
 
 ## Set up work node NFS  
 `sudo apt-get install nfs-common`  
@@ -80,8 +83,11 @@ Create the folder on the work node
 Mount the shared folder  
 `sudo mount -t nfs master:/home/mpiuser/cloud ~/cloud`  
 
-Use `df -h` to check the shared directory
+Use `df -h` to check the shared directory  
 
 To mount access when booting  
 `sudo nano /etc/fstab`  
 Add the line `master:/home/mpiuser/cluster /home/mpiuser/cluster nfs`  
+
+
+## Using the cluster
