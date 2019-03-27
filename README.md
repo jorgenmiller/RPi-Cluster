@@ -66,7 +66,7 @@ Make the directory to share
 Add the line `/home/mpiuser/cluster *(rw,sync,no_root_squash,no_subtree_check)`  
 
 To share the folder every time there is a change:
-`exportfs -a`
+`sudo exportfs -a`
 
 ## Set up work node NFS  
 `sudo apt-get install nfs-common`  
@@ -81,4 +81,4 @@ Use `df -h` to check the shared directory
 
 To mount access when booting  
 `sudo nano /etc/fstab`  
-Add the line `master:/home/mpiuser/cloud /home/mpiuser/cloud nfs`  
+Add the line `master:/home/mpiuser/cluster /home/mpiuser/cluster nfs`  
