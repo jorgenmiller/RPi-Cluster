@@ -94,7 +94,7 @@ Add the line `master:/home/mpiuser/cluster    /home/mpiuser/cluster   nfs     x-
 
 To run your programs, use  
 `mpiexec -n 10 -machinefile nodes python -m mpi4py script.py`  
-where 10 is the amount of repitiations, `nodes` is a file with a list of the work nodes, and script.py is the job.
+where 10 is the amount of repitiations, `nodes` is a file with a list of the work nodes, and `script.py` is the job.
 
 For comparison,  
 `mpiexec -n 10 python -m mpi4py script.py`  
