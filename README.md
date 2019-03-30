@@ -1,5 +1,5 @@
 # RPi-Cluster  
-How I created a raspberry pi cluster.  
+How to create a Raspberry Pi cluster using MPI, NFS, and Python
 
 ## Set up the Pi's  
 [My rapsbery pi set up](https://github.com/jorgenmiller/Raspberry-Pi-Setup)  
